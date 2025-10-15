@@ -1,0 +1,436 @@
+@font-face {
+  font-family: "PPNeue";
+  src: url("font/PPNeueMontreal-Regular.woff") format("woff"), url("font/PPNeueMontreal-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SilkaMono";
+  src: url("font/SilkaMono-Regular.woff") format("woff"), url("font/SilkaMono-Regular.woff2") format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 1.2vh 1vh;
+  background-color: rgb(230, 231, 232, var(--tw-bg-opacity, 1));
+}
+
+nav {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav navlink {
+  font-family: "SilkaMono", monospace;
+  font-size: 2vh;
+  color: rgb(14, 14, 14);
+  display: flex;
+  gap: 5.5vw;
+  align-items: center;
+  justify-self: start;
+  line-height: 114.285%;
+}
+nav navlink .link {
+  display: flex;
+  gap: 0.1vw;
+  align-items: center;
+  justify-self: start;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  opacity: 0.7;
+}
+nav navlink i {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+nav navlink:hover i {
+  transform: rotateZ(-135deg);
+}
+nav navlink2 {
+  display: none;
+  cursor: pointer;
+}
+nav navlink2 i {
+  font-size: 2vw;
+}
+@media (max-width: 768px) {
+  nav navlink {
+    display: none;
+  }
+  nav navlink2 {
+    display: flex;
+    align-items: center;
+  }
+  nav navlink2 i {
+    font-size: 3vh;
+  }
+}
+
+hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1.8vw;
+}
+hero #class1 {
+  height: 86vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 20% 15% 15%;
+  grid-template-areas: "col1" "col2" "col3" "col3" "col3";
+  gap: 2vh;
+}
+hero #class1 #col1 {
+  grid-area: col1;
+  width: 100%;
+  font-family: "PPNeue", sans-serif;
+  font-size: 2.8vh;
+  position: relative;
+  line-height: 130%;
+  color: rgb(14, 14, 14);
+}
+hero #class1 #col1 basictext {
+  top: 80%;
+  left: 50%;
+  display: flex;
+  position: absolute;
+}
+hero #class1 #col2 {
+  grid-area: col2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "SilkaMono", monospace;
+  font-size: 1.6vh;
+  color: rgb(14, 14, 14);
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+hero #class1 #col2 #text1 {
+  display: flex;
+  gap: 2.5vw;
+}
+hero #class1 #col2 #text1 basictext1,
+hero #class1 #col2 #text1 basictext2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+hero #class1 #col3 {
+  grid-area: col3;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+hero #class1 #col3 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 1s ease;
+}
+hero #class1 #col3 img:hover {
+  transform: scale(1.2);
+}
+hero #class1 #col3 .btn-primary1 {
+  height: 4vh;
+  width: auto;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  font-family: "PPNeue", sans-serif;
+  font-size: 1.2vh;
+  border: none;
+  background-color: rgb(230, 231, 232);
+  color: rgb(14, 14, 14);
+  border: none;
+  border-radius: 56px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+hero #class1 #col3 .btn-primary1 i {
+  color: rgb(14, 14, 14);
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+hero #class1 #col3 .btn-primary1:hover i {
+  transform: rotate(-45deg);
+}
+hero #class2 {
+  height: 86vh;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+hero #class2 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 1s ease;
+}
+hero #class2 img:hover {
+  transform: scale(1.2);
+}
+hero #class2 .btn-primary2 {
+  height: 4vh;
+  width: auto;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  font-family: "PPNeue", sans-serif;
+  font-size: 1.2vh;
+  border: none;
+  background-color: rgb(230, 231, 232);
+  color: rgb(14, 14, 14);
+  border: none;
+  border-radius: 56px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+hero #class2 .btn-primary2 i {
+  color: rgb(14, 14, 14);
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+hero #class2 .btn-primary2:hover i {
+  transform: rotate(-45deg);
+}
+@media (max-width: 768px) {
+  hero #class1 {
+    width: 100%;
+    gap: 0.5vh;
+    grid-template-rows: 1fr 1fr 25% 25% 15%;
+  }
+  hero #class1 #col1 basictext {
+    top: 5vh;
+    left: 0;
+    font-size: 1.8rem;
+  }
+  hero #class1 #col2 #text1 {
+    gap: 5vw;
+  }
+  hero #class2 {
+    display: none;
+  }
+}
+
+divider {
+  height: 8vh;
+  width: 100%;
+  margin-top: 2vh;
+  border-top: 1.5px solid rgba(13, 13, 13, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "SilkaMono", monospace;
+  font-size: 1.6vh;
+}
+divider #subheading {
+  display: flex;
+  gap: 8vw;
+  font-family: "SilkaMono", monospace;
+  font-size: 1.6vh;
+  color: rgb(14, 14, 14);
+  line-height: 130%;
+  align-items: center;
+}
+divider .btn-primary3 {
+  height: 4vh;
+  width: auto;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  font-family: "PPNeue", sans-serif;
+  font-size: 1.5vh;
+  border: none;
+  background-color: rgb(14, 14, 14);
+  color: rgb(230, 231, 232);
+  border: none;
+  border-radius: 56px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+divider .btn-primary3 i {
+  color: rgb(230, 231, 232);
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+divider .btn-primary3:hover i {
+  transform: rotate(-45deg);
+}
+@media (max-width: 768px) {
+  divider {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5vh;
+  }
+  divider #subheading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vh;
+  }
+  divider .btn-primary3 {
+    margin-top: 1.5 vh;
+  }
+}
+
+matter {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-width: 100%;
+  /* Responsive behavior */
+}
+matter #pic1 {
+  width: 28%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+matter #pic2 {
+  width: 14%;
+  height: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+matter #pic3 {
+  height: 90%;
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+matter #pic4 {
+  width: 12%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 768px) {
+  matter matter {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  matter #pic3 {
+    display: none;
+  }
+  matter #pic1 {
+    width: 40%;
+    height: 60vh;
+  }
+  matter #pic2 {
+    width: 25%;
+    height: 35vh;
+  }
+  matter #pic4 {
+    width: 32%;
+    height: 50vh;
+  }
+}
+
+bigtext {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  font-family: "PPNeue", sans-serif;
+  font-size: 1.2vw;
+  color: rgb(14, 14, 14);
+  line-height: 130%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  align-items: center;
+  justify-content: space-between;
+  /* Responsive behavior */
+}
+bigtext #btext {
+  font-size: 12vw;
+}
+@media (max-width: 768px) {
+  bigtext {
+    font-size: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5vh;
+  }
+}
+
+product {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "SilkaMono", monospace;
+  font-size: 2vh;
+  color: rgb(14, 14, 14);
+  gap: 5vh;
+  margin-top: 20vh;
+  border-bottom: 1.5px solid rgba(13, 13, 13, 0.2);
+  /* Responsive behavior */
+}
+product #per {
+  font-size: 7vh;
+  font-family: "PPNeue", sans-serif;
+}
+@media (max-width: 768px) {
+  product {
+    font-size: 2vh;
+    gap: 3vh;
+  }
+  product #per {
+    font-size: 5vh;
+  }
+}
+
+productgrid {
+  display: grid;
+}/*# sourceMappingURL=style.css.map */
