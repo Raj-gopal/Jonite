@@ -433,4 +433,226 @@ product #per {
 
 productgrid {
   display: grid;
+  grid-template-columns: 4fr 4fr 4fr 4fr;
+  justify-content: space-between;
+  margin-top: 10vh;
+  gap: 2vh;
+  row-gap: 10vh;
+}
+productgrid .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-bottom: 3vh;
+}
+productgrid .text .first {
+  font-family: "SilkaMono", monospace;
+  font-size: 1.5vh;
+  color: rgb(14, 14, 14);
+}
+productgrid .text .second {
+  max-width: 100%;
+  font-family: "PPNeue", sans-serif;
+  font-size: 2.5vh;
+  color: rgb(14, 14, 14);
+  display: flex;
+  gap: 0.6vh;
+}
+productgrid .text .second .ri-arrow-right-up-line {
+  transition: transform 0.3s ease;
+}
+productgrid .text .second .ri-arrow-right-up-line:hover {
+  transform: rotateZ(45deg);
+}
+productgrid .imagegrid {
+  overflow: hidden;
+}
+productgrid .imagegrid .images {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  cursor: pointer;
+  transition: transform 0.8s ease;
+}
+productgrid .imagegrid .images:hover {
+  transform: scale(1.3);
+}
+productgrid .card2 {
+  max-width: 100%;
+  gap: 1vh;
+  font-size: 3vh;
+  font-family: "PPNeue", sans-serif;
+  border-bottom: 1.5px solid rgba(13, 13, 13, 0.2);
+  transition: all 0.8s ease;
+  gap: 20vh;
+  bottom: 0;
+}
+productgrid .card2:hover {
+  background-color: #726F6D;
+  color: #ffffff;
+}
+productgrid .card2 #spacerdiv {
+  height: 13%;
+  width: 100%;
+  background-color: rgb(230, 231, 232, var(--tw-bg-opacity, 1));
+}
+productgrid .card2 #detailtext {
+  height: 90%;
+  padding-bottom: 4vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  display: flex;
+  gap: 1vh;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  productgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+lastsection {
+  height: 35vh;
+  max-width: 100%;
+  margin-top: 10vh;
+  font-family: "SilkaMono", monospace;
+  font-size: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+lastsection #lasttext {
+  font-family: "PPNeue", sans-serif;
+  font-size: 6vh;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+lastsection #paratext {
+  padding-top: 2vh;
+  text-align: left;
+  width: 70%;
+}
+lastsection .btn-primary4 {
+  margin-top: 4vh;
+  height: 4vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  font-family: "PPNeue", sans-serif;
+  font-size: 1.8vh;
+  border: none;
+  background-color: rgb(14, 14, 14);
+  color: rgb(230, 231, 232);
+  border: none;
+  border-radius: 56px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+lastsection .btn-primary4 i {
+  color: rgb(230, 231, 232);
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+lastsection .btn-primary4:hover i {
+  transform: rotate(-45deg);
+}
+@media (max-width: 768px) {
+  lastsection {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  lastsection #lasttext {
+    font-family: "PPNeue", sans-serif;
+    font-size: 6vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+nextSection {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  width: 100%;
+}
+nextSection .imagesgrid {
+  width: 100%;
+  gap: 3vh;
+}
+nextSection .imagesgrid .imagecontainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+nextSection .imagesgrid .imagecontainer .gridimages {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.8s ease;
+  transform: scale(1.5);
+}
+nextSection .imagesgrid .imagecontainer .gridimages:hover {
+  transform: scale(1.7);
+}
+nextSection .imagesgrid .gridtitle {
+  width: 100%;
+  font-family: "SilkaMono", monospace;
+  font-size: 1.5vh;
+  color: #686563;
+  margin-top: 3vh;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+nextSection .imagesgrid .gridtitle .gridtext1 {
+  font-family: "SilkaMono", monospace;
+  font-size: 1.5vh;
+  color: #686563;
+  display: flex;
+  gap: 0.6vh;
+}
+nextSection .imagesgrid .gridtitle2 {
+  width: 100%;
+  font-family: "SilkaMono", monospace;
+  font-size: 1.5vh;
+  color: #686563;
+  margin-top: 3vh;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+nextSection .imagesgrid .gridtitle2 .gridtext1 {
+  font-family: "SilkaMono", monospace;
+  font-size: 1.5vh;
+  color: #686563;
+  display: flex;
+  gap: 0.6vh;
+}
+nextSection .imagesgrid .gridtext2 {
+  margin-top: 1.5vh;
+  font-family: "PPNeue", sans-serif;
+  font-size: 3vh;
+  color: rgb(30, 30, 30);
+  line-height: 3vh;
 }/*# sourceMappingURL=style.css.map */
